@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+}
+
+.wrapper {
+  padding-top: 2rem;
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameContainer {
+  padding-top: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid div {
+  width: 62.5px;
+  height: 62.5px;
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+.scoreContainer {
+  background-color: red;
+  height: 7rem;
+  padding: 2rem;
+  margin: 0 8rem 0 0;
+}
+p {
+  font-size: 40px;
+}
