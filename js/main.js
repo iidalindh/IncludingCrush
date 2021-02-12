@@ -1,3 +1,5 @@
+
+
 const grid = document.querySelector(".grid");
 const width = 8;
 const squares = [];
@@ -22,12 +24,13 @@ function updateScore() {
 }
 
 function youWon() {
-  document.querySelector(".score").innerHTML = "Score: " + score;
-  setTimeout(function () {
-    if (confirm("You Win!")) {
-      location.reload();
-    }
-  }, 300);
+  document.querySelector(".score").innerHTML = "You won!!";
+  tl.fromTo('.scoreContainer', {opacity: 0, y: "-100%", scaleX:2, scaleY:2}, {opacity:1, y: "0%",scaleX:1, scaleY:1, duration: 1.5});
+  // setTimeout(function () {
+  //   if (confirm("You Win!")) {
+  //     location.reload();
+  //   }
+  // }, 300);
 }
 function createBoard() {
   for (let i = 0; i < width * width; i++) {
