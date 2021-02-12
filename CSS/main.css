@@ -22,10 +22,46 @@ body {
   opacity: 0;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   color: white;
   font-size: 50px;
   display: none;
 }
+
+#fire-work-bg button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 10rem;
+  height: 4rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+#fire-work-bg button:hover {
+  background-color: #c63a80;
+  color: white;
+
+}
+
 .wrapper {
   padding-top: 2rem;
   width: 75%;
@@ -34,6 +70,24 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.white-logo {
+  width: 20%;
+}
+
+.info {
+  margin-top: 2rem;
+  width: 60%;
+  font-size: 0.8rem;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #3596b17e;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .gameContainer {
@@ -70,6 +124,7 @@ h1 {
 }
 
 .scoreContainer {
+  background: linear-gradient(#e996c1, #ff77bc);
   background-color: #ff77bc;
   color: white;
   border-radius: 10px;

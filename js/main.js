@@ -29,7 +29,7 @@ function youWon() {
   $("#fire-work-bg").fireworks();
   $("#fire-work-bg").css("opacity", "0.7");
   let congratsMess = $("<h3>").html("DU VANN DIN MOROT!");
-  let playAgain = $("<button>").html("SPELA IGEN!");
+  let playAgain = $("<button>").html("<i class='fas fa-undo-alt'></i> PLAY AGAIN");
   playAgain.attr("id", "clickButton");
   playAgain.attr("type", "button").css("z-index", "100");
   playAgain.on("click", function () {
