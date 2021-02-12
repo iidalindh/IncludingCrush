@@ -2,6 +2,7 @@ const grid = document.querySelector(".grid");
 const width = 8;
 const squares = [];
 let score = 0;
+let x = 0;
 
 document.querySelector(".score").innerHTML = "Score: " + score;
 const candyColors = [
@@ -15,20 +16,29 @@ const candyColors = [
 
 function updateScore() {
   document.querySelector(".score").innerHTML = "Score: " + score;
-
-  if (score >= 50) {
-    youWon();
+  if (x === 0) {
+    if (score >= 50) {
+      youWon();
+      x = 1;
+    }
   }
 }
 
 function youWon() {
-  document.querySelector(".score").innerHTML = "Score: " + score;
-  setTimeout(function () {
-    if (confirm("You Win!")) {
-      location.reload();
-    }
-  }, 300);
+  $("#fire-work-bg").css("display", "flex");
+  $("#fire-work-bg").fireworks();
+  $("#fire-work-bg").css("opacity", "0.7");
+  let congratsMess = $("<h3>").html("YOU WON YOU CRAZY AVOCADO!");
+  let playAgain = $("<button>").html("<i class='fas fa-undo-alt'></i> PLAY AGAIN");
+  playAgain.attr("id", "clickButton");
+  playAgain.attr("type", "button").css("z-index", "100");
+  playAgain.on("click", function () {
+    location.reload();
+  });
+  $("#fire-work-bg").append(congratsMess);
+  $("#fire-work-bg").append(playAgain);
 }
+
 function createBoard() {
   for (let i = 0; i < width * width; i++) {
     const square = document.createElement("div");
