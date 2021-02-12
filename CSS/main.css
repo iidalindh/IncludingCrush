@@ -7,11 +7,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
   background: url(../pictures/candy-crush.jpg) no-repeat bottom fixed;
   background-size: cover;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
-
+#fire-work-bg {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 50px;
+  display: none;
+}
 .wrapper {
   padding-top: 2rem;
   width: 75%;
@@ -30,7 +44,7 @@ body {
   align-items: center;
 }
 .grid {
-  background-color: rgba(255, 255,255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 2rem;
   border-radius: 10px;
   min-width: 400px;
@@ -56,7 +70,7 @@ h1 {
 }
 
 .scoreContainer {
-  background-color: #FF77BC;
+  background-color: #ff77bc;
   color: white;
   border-radius: 10px;
   font-weight: 700;
@@ -74,15 +88,15 @@ p {
 
 #cover {
   width: 100%;
-    height: 100vh;
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #cover img {

@@ -1,5 +1,3 @@
-
-
 const grid = document.querySelector(".grid");
 const width = 8;
 const squares = [];
@@ -18,20 +16,26 @@ const candyColors = [
 function updateScore() {
   document.querySelector(".score").innerHTML = "Score: " + score;
 
-  if (score >= 50) {
+  if (score >= 20) {
     youWon();
   }
 }
 
 function youWon() {
-  document.querySelector(".score").innerHTML = "You won!!";
-  tl.fromTo('.scoreContainer', {opacity: 0, y: "-100%", scaleX:2, scaleY:2}, {opacity:1, y: "0%",scaleX:1, scaleY:1, duration: 1.5});
-  // setTimeout(function () {
-  //   if (confirm("You Win!")) {
-  //     location.reload();
-  //   }
-  // }, 300);
+  $("#fire-work-bg").css("display", "flex");
+  $("#fire-work-bg").fireworks();
+  $("#fire-work-bg").css("opacity", "0.7");
+  let congratsMess = $("<h3>").html("DU VANN DIN MOROT!");
+  let playAgain = $("<button>").html("SPELA IGEN!");
+  playAgain.attr("id", "clickButton");
+  playAgain.attr("type", "button").css("z-index", "100");
+  playAgain.on("click", function () {
+    location.reload();
+  });
+  $("#fire-work-bg").append(congratsMess);
+  $("#fire-work-bg").append(playAgain);
 }
+
 function createBoard() {
   for (let i = 0; i < width * width; i++) {
     const square = document.createElement("div");
@@ -359,3 +363,21 @@ window.setInterval(function () {
   checkColumnForThree();
   moveDown();
 }, 100);
+
+// setTimeout(function () {
+// $('div').fireworks();
+
+// $("body").click(function () {
+//     $("#fire-work-bg").fireworks();
+//     $("#fire-work-bg").css("opacity", "0.7");
+//     let congratsMess = $("<h3>").html("DU VANN DIN MOROT!");
+//     $("#fire-work-bg").append(congratsMess);
+//   });
+//   $("body").click(function () {
+//     $(".wrapper").fireworks("destroy");
+//   });
+// });
+
+function reloadPage() {
+  location.reload();
+}
