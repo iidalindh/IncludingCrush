@@ -158,3 +158,10 @@ p {
 #cover img {
   width: 600px;
 }
+
+.loading {
+  color: rgb(85, 85, 85);
+  font-size: 1rem;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+}
