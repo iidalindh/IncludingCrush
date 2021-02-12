@@ -2,6 +2,7 @@ const grid = document.querySelector(".grid");
 const width = 8;
 const squares = [];
 let score = 0;
+let x = 0;
 
 document.querySelector(".score").innerHTML = "Score: " + score;
 const candyColors = [
@@ -15,9 +16,11 @@ const candyColors = [
 
 function updateScore() {
   document.querySelector(".score").innerHTML = "Score: " + score;
-
-  if (score >= 20) {
-    youWon();
+  if (x === 0) {
+    if (score >= 20) {
+      youWon();
+      x = 1;
+    }
   }
 }
 
@@ -363,21 +366,3 @@ window.setInterval(function () {
   checkColumnForThree();
   moveDown();
 }, 100);
-
-// setTimeout(function () {
-// $('div').fireworks();
-
-// $("body").click(function () {
-//     $("#fire-work-bg").fireworks();
-//     $("#fire-work-bg").css("opacity", "0.7");
-//     let congratsMess = $("<h3>").html("DU VANN DIN MOROT!");
-//     $("#fire-work-bg").append(congratsMess);
-//   });
-//   $("body").click(function () {
-//     $(".wrapper").fireworks("destroy");
-//   });
-// });
-
-function reloadPage() {
-  location.reload();
-}
