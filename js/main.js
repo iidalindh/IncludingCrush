@@ -17,7 +17,7 @@ const candyColors = [
 function updateScore() {
   document.querySelector(".score").innerHTML = "Score: " + score;
   if (x === 0) {
-    if (score >= 20) {
+    if (score >= 50) {
       youWon();
       x = 1;
     }
@@ -28,7 +28,7 @@ function youWon() {
   $("#fire-work-bg").css("display", "flex");
   $("#fire-work-bg").fireworks();
   $("#fire-work-bg").css("opacity", "0.7");
-  let congratsMess = $("<h3>").html("DU VANN DIN MOROT!");
+  let congratsMess = $("<h3>").html("YOU WON YOU CRAZY AVOCADO!");
   let playAgain = $("<button>").html("<i class='fas fa-undo-alt'></i> PLAY AGAIN");
   playAgain.attr("id", "clickButton");
   playAgain.attr("type", "button").css("z-index", "100");
